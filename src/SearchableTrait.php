@@ -1,4 +1,4 @@
-<?php namespace Nicolaslopezj\Searchable;
+<?php namespace Putchi\Searchable;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Config;
@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 /**
  * Trait SearchableTrait
- * @package Nicolaslopezj\Searchable
+ * @package Putchi\Searchable
  * @property array $searchable
  * @property string $table
  * @property string $primaryKey

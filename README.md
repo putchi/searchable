@@ -12,7 +12,7 @@ This is not optimized for big searches, but sometimes you just need to make it s
 Simply add the package to your `composer.json` file and run `composer update`.
 
 ```
-"nicolaslopezj/searchable": "1.*"
+"putchi/searchable": "1.*"
 ```
 
 # Usage
@@ -20,7 +20,7 @@ Simply add the package to your `composer.json` file and run `composer update`.
 Add the trait to your model and your search rules.
 
 ```php
-use Nicolaslopezj\Searchable\SearchableTrait;
+use Putchi\Searchable\SearchableTrait;
 
 class User extends \Eloquent
 {

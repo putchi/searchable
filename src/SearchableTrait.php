@@ -46,7 +46,7 @@ trait SearchableTrait
             return $q;
         }
 
-        $search = mb_strtolower(trim($search));
+        $this->search_value = $search = mb_strtolower(trim($search));
         preg_match_all('/(?:")((?:\\\\.|[^\\\\"])*)(?:")|(\S+)/', $search, $matches);
         $words = $matches[1];
         for ($i = 2; $i < count($matches); $i++) {
@@ -85,7 +85,7 @@ trait SearchableTrait
 
         // Default the threshold if no value was passed.
         if (is_null($threshold)) {
-            $threshold = $relevance_count / 4;
+            $threshold = $relevance_count / count($this->getColumns());
         }
 
         if (!empty($selects)) {
